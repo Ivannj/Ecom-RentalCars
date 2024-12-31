@@ -9,6 +9,7 @@ import {
   SignedOut,
   UserButton
 } from '@clerk/nextjs'
+import Head from "next/head"; 
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -24,6 +25,9 @@ export default function RootLayout({ children }: Readonly< { children: React.Rea
   return (
     <ClerkProvider>
     <html lang="en">
+      <head>
+      <link rel="icon" href="/logoWhite.svg" type="image/svg+xml" />
+      </head>
       <body className= {outfit.variable}>
       <NextTopLoader color="#000" />
         {children}

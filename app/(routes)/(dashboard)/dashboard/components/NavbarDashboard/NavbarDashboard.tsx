@@ -20,8 +20,8 @@ export function NavbarDashboard() {
         </SheetContent>
       </Sheet>
       </div>
-      <div> 
-        <UserButton />
+      <div className="flex items-center justify-end w-full gap-x-2"> 
+        <UserButton  />
       </div>
     </nav>
   );
