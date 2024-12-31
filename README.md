@@ -3,13 +3,13 @@
 Ecommerce Rental-Cars
 
 Tech: 
-***TypeScript***
-***NextJS***
-***React***
-***TailWindCSS***
-***Shadcn***
-***Strapi***
-***Stripe***
+***TypeScript*** |
+***NextJS*** |
+***React*** |
+***TailWindCSS*** |
+***Shadcn*** |
+***Strapi*** |
+***Stripe*** 
 
 
 
