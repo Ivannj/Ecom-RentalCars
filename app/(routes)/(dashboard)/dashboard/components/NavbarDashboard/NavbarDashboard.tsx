@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { SidebarRoutes } from "../SidebarRoutes";
+import { UserButton } from "@clerk/nextjs";
 
 export function NavbarDashboard() {
   return (
@@ -18,6 +19,9 @@ export function NavbarDashboard() {
             <SidebarRoutes />
         </SheetContent>
       </Sheet>
+      </div>
+      <div> 
+        <UserButton />
       </div>
     </nav>
   );
