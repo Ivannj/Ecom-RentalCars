@@ -16,7 +16,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Rental Cars Brisbane IvanNJ",
+  title: "Brivify | Rental Cars Brisbane",
   description: "Website for Rental your favourite car in your favourite City!",
 };
 
