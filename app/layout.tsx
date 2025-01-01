@@ -2,14 +2,9 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import NextTopLoader from 'nextjs-toploader';
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+import { ClerkProvider } from '@clerk/nextjs'
 import Head from "next/head"; 
+import { Toaster } from "@/components/ui/toaster"
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -31,6 +26,7 @@ export default function RootLayout({ children }: Readonly< { children: React.Rea
       <body className= {outfit.variable}>
       <NextTopLoader color="#000" />
         {children}
+        <Toaster />
       </body>
     </html>
     </ClerkProvider>
