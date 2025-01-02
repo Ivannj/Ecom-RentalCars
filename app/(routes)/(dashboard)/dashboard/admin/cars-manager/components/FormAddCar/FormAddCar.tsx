@@ -23,8 +23,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { UploadButton } from "@uploadthing/react";
+import { useState } from "react";
+import { OurFileRouter } from "@/app/api/uploadthing/core";
+
 
 export function FormAddCar() {
+  const [photoUploaded, setPhotoUploaded] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -182,7 +187,35 @@ export function FormAddCar() {
             )}
           />
 
-          
+          <FormField
+            control={form.control}
+            name="photo"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Car Image</FormLabel>
+                <FormControl>
+                  {photoUploaded ? (
+                    <p className="text-sm">Image uploaded!</p>
+                  ) : (
+                    <UploadButton<OurFileRouter, "photo"> 
+                      className="rounded-lg bg-slate-600/20 text-slate-800 outline-dotted outline-3"
+                      {...field}
+                      endpoint="photo" 
+                      onClientUploadComplete={(res) => {
+                        console.log("Imagen cargada: ", res);
+                        form.setValue("photo", res?.[0].url);  // Asignar la URL de la imagen
+                        setPhotoUploaded(true);  // Actualiza el estado de carga
+                      }}
+                      onUploadError={(error: Error) => {
+                        console.log(error);
+                      }}
+                    />
+                  )}
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
         <Button type="submit">Submit</Button>
       </form>
