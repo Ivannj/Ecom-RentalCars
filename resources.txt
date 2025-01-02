@@ -1,0 +1,7 @@
+Important resources:
+
+- Shadcn (para componentes de UI personalizables)
+- Prisma (para ORM y manejo de bases de datos)
+- Neon.tech (para bases de datos PostgreSQL en la nube)
+- Uploadthing (para gestión de archivos y carga de recursos)
+- Clerk (para autenticación y gestión de usuarios)
