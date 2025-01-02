@@ -2,7 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { isValid, z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -27,7 +27,6 @@ import { UploadButton } from "@uploadthing/react";
 import { useState } from "react";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
 
-
 export function FormAddCar() {
   const [photoUploaded, setPhotoUploaded] = useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -48,6 +47,8 @@ export function FormAddCar() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
   };
+
+  const {isValid} = form.formState;
 
   return (
     <Form {...form}>
@@ -197,14 +198,14 @@ export function FormAddCar() {
                   {photoUploaded ? (
                     <p className="text-sm">Image uploaded!</p>
                   ) : (
-                    <UploadButton<OurFileRouter, "photo"> 
+                    <UploadButton<OurFileRouter, "photo">
                       className="rounded-lg bg-slate-600/20 text-slate-800 outline-dotted outline-3"
                       {...field}
-                      endpoint="photo" 
+                      endpoint="photo"
                       onClientUploadComplete={(res) => {
                         console.log("Imagen cargada: ", res);
-                        form.setValue("photo", res?.[0].url);  // Asignar la URL de la imagen
-                        setPhotoUploaded(true);  // Actualiza el estado de carga
+                        form.setValue("photo", res?.[0].url); // Asignar la URL de la imagen
+                        setPhotoUploaded(true); // Actualiza el estado de carga
                       }}
                       onUploadError={(error: Error) => {
                         console.log(error);
@@ -216,8 +217,22 @@ export function FormAddCar() {
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="priceDay"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Price per Day</FormLabel>
+                <FormControl>
+                  <Input placeholder="20€" type="number" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="w-full mt-5" disabled={!isValid}>Create Car</Button>
       </form>
     </Form>
   );
