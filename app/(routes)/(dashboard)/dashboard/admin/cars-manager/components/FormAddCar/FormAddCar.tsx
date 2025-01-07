@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { isValid, z } from "zod";
+import axios from "axios";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -24,16 +25,25 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { UploadButton } from "@uploadthing/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
+import { FormAddCarProps } from "./FormAddCar.type";
+import { title } from "process";
+import { toast } from "@/hooks/use-toast";
+import { useRouter } from "next/navigation";
 
-export function FormAddCar() {
+export function FormAddCar(props: FormAddCarProps) {
+  const { setOpenDialog } = props;
   const [photoUploaded, setPhotoUploaded] = useState(false);
+  const [years, setYears] = useState<string[]>([]);
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      cv: "",
+      year: "",
+      colour: "",
+      CV: "",
       transmission: "",
       people: "",
       photo: "",
@@ -44,32 +54,115 @@ export function FormAddCar() {
     },
   });
 
+  useEffect(() => {
+    const currentYear = new Date().getFullYear();
+    const yearsArray = [];
+    for (let year = 2005; year <= currentYear; year++) {
+      yearsArray.push(year.toString());
+    }
+    setYears(yearsArray);
+  }, []);
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+    setOpenDialog(false);
+    try {
+      await axios.post("/api/car", values);
+      toast({
+        title: "Car created ✔",
+      });
+      router.refresh();
+    } catch (error) {
+      toast({
+        title: "Something went wrong ❌",
+        variant: "destructive",
+      });
+    }
   };
 
-  const {isValid} = form.formState;
+  const { isValid } = form.formState;
 
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-3 lg:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input placeholder="Kia RIO" {...field} />
+                  <Input placeholder="Kia Rio" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
+
           <FormField
             control={form.control}
-            name="cv"
+            name="year"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Year</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Year of car" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    {years.map((year) => (
+                      <SelectItem key={year} value={year}>
+                        {year}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="colour"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Colour</FormLabel>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Colour of people" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="white">White</SelectItem>
+                    <SelectItem value="black">Black</SelectItem>
+                    <SelectItem value="red">Red</SelectItem>
+                    <SelectItem value="orange">Orange</SelectItem>
+                    <SelectItem value="green">Green</SelectItem>
+                    <SelectItem value="yellow">Yellow</SelectItem>
+                    <SelectItem value="violet">Violet</SelectItem>
+                    <SelectItem value="grey">Grey</SelectItem>
+                    <SelectItem value="brown">Brown</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="CV"
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Power</FormLabel>
@@ -93,7 +186,7 @@ export function FormAddCar() {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select the type of car" />
+                      <SelectValue placeholder="Type of car" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -118,7 +211,7 @@ export function FormAddCar() {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select the quantity of people" />
+                      <SelectValue placeholder="Quantity of people" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -145,7 +238,7 @@ export function FormAddCar() {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select the engine of the car" />
+                      <SelectValue placeholder="Engine of the car" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -172,7 +265,7 @@ export function FormAddCar() {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select the type of car" />
+                      <SelectValue placeholder="Type of car" />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -232,7 +325,9 @@ export function FormAddCar() {
             )}
           />
         </div>
-        <Button type="submit" className="w-full mt-5" disabled={!isValid}>Create Car</Button>
+        <Button type="submit" className="w-full mt-5" disabled={!isValid}>
+          Create Car
+        </Button>
       </form>
     </Form>
   );

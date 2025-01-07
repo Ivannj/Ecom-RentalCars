@@ -18,6 +18,8 @@ model Car {
   id           String   @id @default(uuid())
   userId       String
   name         String   @db.Text
+  year         String   @db.Text
+  colour       String   @db.Text
   CV           String   @db.Text
   transmission String   @db.Text
   people       String   @db.Text
