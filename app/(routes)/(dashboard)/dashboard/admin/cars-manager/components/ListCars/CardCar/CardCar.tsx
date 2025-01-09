@@ -43,7 +43,7 @@ export function CardCar(props: CardCarProps) {
 
   const handlerPublishCar = async (publish: boolean) => {
     try {
-      await axios.patch(`api/car/${car.id}/form`, { isPublish: publish });
+      await axios.patch(`/api/car/${car.id}/form`, { isPublish: publish });
       if (publish) {
         toast({
           title: "Car Published ✔",
