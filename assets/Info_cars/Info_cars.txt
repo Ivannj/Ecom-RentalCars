@@ -1,0 +1,20 @@
+Fichas tecnicas:
+
+- Kia rio 2016 - compact - 84 Cv - 4pers - autom - unleaded - 25.7$ ************* 
+- Mazda 2 2010 - compact - 100 Cv - 4pers - manual - unleaded - 19.2$ **************
+- Hyundai i30 2020 - compact - 120 Cv - 5pers - autom - unleaded - 30.5$ *************
+- ford fiesta 2012 - compact - 90 Cv - 5pers - autom - unleaded 
+- Toyota Corolla 2008 - compact - 100 CV - 5pers - manual - unleaded 
+- Toyota Corolla 2010 SEDAN - 95 Cv - 5pers - autom - unleaded 
+- Mishubishi Lancer 2012 -compact - 140 Cv - 5pers - manual -unleaded 
+- Audi A1 sportback 2018 - compact - 200 Cv - 4pers - autom - Diesel 
+- Mishubishu pajero 2015 - SUV - 120 Cv - 5pers - manual - unleaded 
+- Kia cerato 2022 - SEDAN - 150 Cv - 5pers - autom - diesel 
+- Ford Ranger 2014 - SUV - 120 CV - 5pers - manual - unleaded 
+- Tesla model S 2022 - Sedan - 120 CV - 5pers - autom - electric 
+- Volkswagen golf 2018 - compact - 180 Cv - 5pers - autom - unleaded 
+- BMW X3 2020 - SUV - 200 CV - 5pers - autom - Diesel 
+- Tesla model 3 2021 - Sedan - 120 CV - 5pers - autom- electrinco 
+- hyundai ioniq 5 2022 - SUV - 150 CV - 5pers - autom - electrico 
+- Toyota camry 2019 - Sedan - 130Cv - 5pers - autom - hibrido 
+

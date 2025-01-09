@@ -16,7 +16,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { formSchema } from "./FormAddCar.form";
+import { formSchema } from "./FormEditCar.form";
 import {
   Select,
   SelectContent,
@@ -27,31 +27,31 @@ import {
 import { UploadButton } from "@uploadthing/react";
 import { useEffect, useState } from "react";
 import { OurFileRouter } from "@/app/api/uploadthing/core";
-import { FormAddCarProps } from "./FormAddCar.type";
 import { title } from "process";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
+import { FormEditCarProps } from "./FormEditCar.types.";
 
-export function FormAddCar(props: FormAddCarProps) {
-  const { setOpenDialog } = props;
+export function FormEditCar(props: FormEditCarProps) {
+  const { carData, setOpenDialog } = props;
   const [photoUploaded, setPhotoUploaded] = useState(false);
   const [years, setYears] = useState<string[]>([]);
   const router = useRouter();
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
-      year: "",
-      colour: "",
-      CV: "",
-      transmission: "",
-      people: "",
-      photo: "",
-      engine: "",
-      type: "",
-      priceDay: "",
-      isPublish: false,
+      name: carData.name,
+      year: carData.year,
+      colour: carData.colour,
+      CV: carData.CV,
+      transmission: carData.transmission,
+      people: carData.people,
+      photo: carData.photo,
+      engine: carData.engine,
+      type: carData.type,
+      priceDay: carData.priceDay,
+      isPublish: carData.isPublish ? carData.isPublish : false,
     },
   });
 
@@ -66,15 +66,16 @@ export function FormAddCar(props: FormAddCarProps) {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setOpenDialog(false);
+
     try {
-      await axios.post("/api/car", values);
+      await axios.patch(`/api/car/${carData.id}/form`, values);
       toast({
-        title: "Car created ✔",
+        title: "Car edited! ✔",
       });
       router.refresh();
     } catch (error) {
       toast({
-        title: "Something went wrong ❌",
+        title: "Something went error",
         variant: "destructive",
       });
     }
@@ -327,7 +328,7 @@ export function FormAddCar(props: FormAddCarProps) {
           />
         </div>
         <Button type="submit" className="w-full mt-5" disabled={!isValid}>
-          Create Car
+          Edit Car
         </Button>
       </form>
     </Form>
