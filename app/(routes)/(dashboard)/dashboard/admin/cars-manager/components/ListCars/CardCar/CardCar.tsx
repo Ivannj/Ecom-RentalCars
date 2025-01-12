@@ -53,6 +53,7 @@ export function CardCar(props: CardCarProps) {
           title: "Car unpublish ⚠ ",
         });
       }
+      router.refresh();
     } catch (error) {
       toast({
         title: "Something went wrong",
