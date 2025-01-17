@@ -42,7 +42,7 @@ model Order {
   carName     String   @db.Text
   userId      String   @db.Text
   orderDate   DateTime @default(now())
-  orderEndDae DateTime @default(now())
+  orderEndDate DateTime @default(now())
   status      String   @db.Text
   totalAmount String   @db.Text
 
