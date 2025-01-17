@@ -5,3 +5,5 @@ Important resources:
 - Neon.tech (para bases de datos PostgreSQL en la nube)
 - Uploadthing (para gestión de archivos y carga de recursos)
 - Clerk (para autenticación y gestión de usuarios)
+- Axios (para interactuar con la API)
+- Stripe (para la pasarela de pagos)

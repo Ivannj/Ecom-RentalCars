@@ -31,7 +31,7 @@ export  function CalendarSelector(props: CalendarSelectorProps) {
     const calculateDaysBetween = (from: Date, to:Date): number => {
         const oneDay= 24 * 60 * 60 * 1000;
         const diffInTime = to.getTime() - from.getTime()
-        return Math.round(diffInTime / oneDay);
+        return Math.max(1, Math.round(diffInTime / oneDay));
     }
 
     const daysBetween = date?.from && date?.to ? calculateDaysBetween(date.from, date.to) : 0;
