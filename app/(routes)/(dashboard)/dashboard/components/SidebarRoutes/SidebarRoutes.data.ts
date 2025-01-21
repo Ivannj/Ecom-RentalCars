@@ -30,7 +30,7 @@ export const dataAdminSidebar = [
     {
         icon: Calendar,
         label: "All Reserves",
-        href: "/all-reserves",
+        href: "/dashboard/admin/reserves-admin",
     },
 
 ]

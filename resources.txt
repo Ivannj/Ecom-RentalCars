@@ -7,5 +7,6 @@ Important resources:
 - Clerk (para autenticación y gestión de usuarios)
 - Axios (para interactuar con la API)
 - Stripe (para la pasarela de pagos)
-- Zustand (libreria de animaciones)
+- Zustand
+- framer-motion (libreria transiciones)
 

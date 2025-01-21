@@ -1,0 +1,4 @@
+Cambiar ruta de /cars (no existe): 
+
+components/shared/navbar/navbar.tsx
+App/dashboard/reserves/page.tsx

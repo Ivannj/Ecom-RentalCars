@@ -19,7 +19,7 @@ import { useRouter } from "next/navigation";
 
 import { CardCarProps } from "./CardCar.types";
 import { ButtonEditCar } from "./ButtonEditCar";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/components/ui/use-toast";
 import axios from "axios";
 
 export function CardCar(props: CardCarProps) {

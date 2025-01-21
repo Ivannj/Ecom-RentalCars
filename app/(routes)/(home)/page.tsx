@@ -1,11 +1,11 @@
+import { Navbar } from "@/components/Shared/Navbar";
+import { FirstBlock } from "./components/FirstBlock";
 
 export default function Home() {
   return (
     <div>
-      <div className=" h-full flex items-center justify-center">
-        From page home
-      </div>
+      <Navbar />
+      <FirstBlock />
     </div>
-  );
+  )
 }
-
