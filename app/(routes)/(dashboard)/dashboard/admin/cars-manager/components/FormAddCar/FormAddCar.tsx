@@ -147,10 +147,9 @@ export function FormAddCar(props: FormAddCarProps) {
                     <SelectItem value="white">White</SelectItem>
                     <SelectItem value="black">Black</SelectItem>
                     <SelectItem value="red">Red</SelectItem>
-                    <SelectItem value="orange">Orange</SelectItem>
                     <SelectItem value="green">Green</SelectItem>
                     <SelectItem value="yellow">Yellow</SelectItem>
-                    <SelectItem value="violet">Violet</SelectItem>
+                    <SelectItem value="blue">Blue</SelectItem>
                     <SelectItem value="grey">Grey</SelectItem>
                     <SelectItem value="brown">Brown</SelectItem>
                     <SelectItem value="other">Other</SelectItem>

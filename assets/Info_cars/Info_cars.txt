@@ -17,4 +17,12 @@ Fichas tecnicas:
 - Tesla model 3 2021 - Sedan - 120 CV - 5pers - autom- electrinco 41 ***************
 - hyundai ioniq 5 2022 - SUV - 150 CV - 5pers - autom - HIBRIDO 36 ******************
 - Toyota camry 2019 - Sedan - 130Cv - 5pers - autom - hibrido 26 *******************
+- suzuki swift 2009 - COMPACT - 64CV - 4pers - AUTOM - unleaded - 17.5 **********
+- suzuki swift 2023 - COMPACT - 68CV - 4pers - AUTOM - unleaded - 19.5************
+- holden UTE 2016 - SEDAN - 180CV - 4pers - AUTOM - unleaded - 23.2 ************
+- HOLDEN COMMODORE 2012 - FAMILIAR - 110CV - 7PERS - AUTOM - Diesel - 21.2***********
+- honda jazz 2013 - COMPACT - 72CV - 5PERS - AUTOM - unleaded - 18.6**************
+- hyundai getz 2012 - COMPACT - 65CV - 5PERS - AUTOM - unleaded - 18.6***********
+- subaru imprezza 2018 - 250CV - SEDAN - 5PERS - MANUAL - unleaded - 45**********
+- NISSAN XTRAIL 2020 - SUV - 140CV - 7PERS - MANUAL - unleaded - 39*************
 

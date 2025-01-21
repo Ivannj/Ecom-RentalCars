@@ -1,4 +1,13 @@
-Cambiar ruta de /cars (no existe): 
+1 - Cambiar ruta de /cars (no existe): 
 
 components/shared/navbar/navbar.tsx
 App/dashboard/reserves/page.tsx
+
+2- No cierran los formularios 
+
+
+3- filtros en list cars (cars o dasboard) y admin cars 
+
+4- no aparece el Heart para añadir a loved cars en pantalla movil
+
+5- mejorar cards de cars en pantalla movil 
