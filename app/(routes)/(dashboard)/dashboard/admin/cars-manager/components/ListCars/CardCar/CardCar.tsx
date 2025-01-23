@@ -63,13 +63,13 @@ export function CardCar(props: CardCarProps) {
   };
 
   return (
-    <div className="relative p-1 bg-white rounded-lg shadow-md hover:shadow-lg max-w-[300px] max-h-[500px]">
+    <div className="relative p-1 bg-white rounded-lg shadow-md hover:shadow-lg max-w-[600px] max-h-[1000px]">
       <Image
         src={car.photo}
         alt={car.name}
         width={300} // Reduce el tamaño de la imagen
         height={500} // Reduce el tamaño de la imagen
-        className="rounded-lg object-cover"
+        className="rounded-lg object-cover mx-auto"
       />
       {car.isPublish ? (
         <p className="absolute top-0 right-0 w-full p-1 text-center text-white bg-green-700 text-sm rounded-t-lg">
@@ -83,7 +83,7 @@ export function CardCar(props: CardCarProps) {
 
       <div className="relative p-2">
         <div className="flex flex-col mb-3 gap-x-2">
-          <p className="text-sm font-semibold min-h-12">{car.name}</p>
+          <h2 className="text-xl font-bold min-h-16 lg:min-h-fit">{car.name}</h2>
           <p className="text-sm">{car.priceDay}$ /day</p>
         </div>
 

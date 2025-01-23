@@ -13,7 +13,7 @@ import { useState } from "react";
 import { FormEditCar } from "../FormEditCar";
 
 export function ButtonEditCar(props: ButtonEditCarProps) {
-  const { carData } = props;
+  const { carData, className  } = props;
   const [openDialog, setOpenDialog] = useState(false);
   return (
     <Dialog open={openDialog}>
