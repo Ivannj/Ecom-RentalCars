@@ -85,8 +85,8 @@ export function FormEditCar(props: FormEditCarProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="grid gap-3 lg:grid-cols-2">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-[90%]">
+        <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2">
           <FormField
             control={form.control}
             name="name"
