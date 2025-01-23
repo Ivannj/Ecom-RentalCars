@@ -7,4 +7,6 @@ export type SidebarItemProps ={
         href: string;   
     };
     key: string;
+
+    onClose?: () => void;
 }
