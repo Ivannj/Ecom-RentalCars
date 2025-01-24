@@ -5,53 +5,31 @@ import { NextResponse } from "next/server";
 export async function PATCH(req: Request, context: { params: { carId: string } }) {
   try {
     const { userId } = await auth();
-    const { carId } = context.params; // Asegura que params es un objeto
+    const { carId } = context.params;
 
     const { isPublish } = await req.json();
 
-    // Verificar si el usuario está autenticado
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    // Actualizar el registro del coche
+    if (typeof isPublish !== "boolean") {
+      return new NextResponse("Invalid isPublish value", { status: 400 });
+    }
+
     const car = await db.car.update({
       where: {
         id: carId,
-        userId, // Asociar al usuario autenticado
+        userId,
       },
       data: {
-        isPublish, // Actualizar estado de publicación
+        isPublish,
       },
     });
 
-    return NextResponse.json(car); // Responder con los datos actualizados
+    return NextResponse.json(car);
   } catch (error) {
-    console.error("[CAR ID PATCH ERROR]", error); // Registro del error
-    return new NextResponse("Internal Error", { status: 500 });
-  }
-}
-
-export async function DELETE(req: Request, context: { params: { carId: string } }) {
-  try {
-    const { userId } = await auth();
-    const { carId } = context.params; // Asegura que params es un objeto
-
-    // Verificar si el usuario está autenticado
-    if (!userId) {
-      return new NextResponse("Unauthorized", { status: 401 });
-    }
-
-    // Eliminar el registro del coche
-    const deletedCar = await db.car.delete({
-      where: {
-        id: carId,
-      },
-    });
-
-    return NextResponse.json(deletedCar); // Responder con los datos eliminados
-  } catch (error) {
-    console.error("[DELETE CAR ID ERROR]", error); // Registro del error
+    console.error("[CAR ID PATCH ERROR]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
 }

@@ -8,12 +8,14 @@ export async function PATCH(
 ) {
   try {
     const { userId } = await auth();
-    const { carId } = params;
+    const { carId } = params; // Asegura que params es un objeto plano
+
     const values = await req.json();
 
     if (!userId) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
+
     const car = await db.car.update({
       where: {
         id: carId,
@@ -26,7 +28,7 @@ export async function PATCH(
 
     return NextResponse.json(car);
   } catch (error) {
-    console.log("[CAR FORM ID", error);
+    console.error("[CAR FORM PATCH ERROR]", error);
     return new NextResponse("Internal Error", { status: 500 });
   }
 }
