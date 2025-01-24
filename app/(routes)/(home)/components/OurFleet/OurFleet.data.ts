@@ -4,7 +4,7 @@ export const categoryOurFleet = [
       active: false,
     },
     {
-      name: "Coupe",
+      name: "Compact",
       active: true,
     },
     {
@@ -16,7 +16,7 @@ export const categoryOurFleet = [
       active: false,
     },
     {
-      name: "4x4",
+      name: "Sedan",
       active: true,
     },
     {

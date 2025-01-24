@@ -1,10 +1,3 @@
-1- No cierra el menu burger al cambiar de pagina. PENDIENTE DIFICIL 
 
-
-5 -Imagenes de la Home de OurFleet version movil no se visualizan bien
-
-6 - Animaciones de la home mas rapidas
-
-problema: 2 LOGOS.
 
 6:45 video 

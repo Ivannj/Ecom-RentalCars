@@ -26,12 +26,14 @@ export function ButtonEditCar(props: ButtonEditCarProps) {
         </Button>
       </DialogTrigger>
       <DialogContent className="w-full mx-auto p-4 max-h-[90vh] overflow-y-auto">
+        <DialogTitle>
         <DialogHeader>
           <DialogTitle>Edit Car</DialogTitle>
           <DialogDescription>
             <FormEditCar setOpenDialog={setOpenDialog} carData={carData} />
           </DialogDescription>
         </DialogHeader>
+        </DialogTitle>
       </DialogContent>
     </Dialog>
   );

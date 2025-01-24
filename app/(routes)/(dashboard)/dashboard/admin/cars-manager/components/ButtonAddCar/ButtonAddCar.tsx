@@ -25,12 +25,14 @@ export function ButtonAddCar() {
           </Button>
         </DialogTrigger>
         <DialogContent className="w-full mx-auto p-4 max-h-[90vh] overflow-y-auto">
+          <DialogTitle>
           <DialogHeader>
             <DialogTitle>Add a New Car</DialogTitle>
             <DialogDescription>
               <FormAddCar setOpenDialog={setOpenDialog} />
             </DialogDescription>
           </DialogHeader>
+          </DialogTitle>
         </DialogContent>
       </Dialog>
     );

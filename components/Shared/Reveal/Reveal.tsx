@@ -1,7 +1,7 @@
 "use client";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { RevealProps } from "./Reveal.types";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export const fadeIn = (position: string, delay?: number) => {
   return {
@@ -11,20 +11,20 @@ export const fadeIn = (position: string, delay?: number) => {
       opacity: 1,
       transition: {
         type: "tween",
-        duration: 1.4,
-        delay: delay ? delay : 0.5,
+        duration: 0.7, // Reducir duración de 1.4 a 0.7
+        delay: delay ? delay : 0, // Reducir delay predeterminado a 0
         ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
     hidden: {
-      y: position === "bottom" ? -80 : 0,
-      x: position === "right" ? 80 : 0,
+      y: position === "bottom" ? -40 : 0, // Hacer el movimiento más sutil
+      x: position === "right" ? 40 : 0, // Reducir el desplazamiento horizontal
       opacity: 0,
       transition: {
         type: "tween",
-        duration: 0.5,
-        delay: 0.5,
-        ease: [0.25, 0.25, 0.25, 0.25],
+        duration: 0.4, // Animación de salida más rápida
+        delay: 0, // Eliminar delay
+        ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
   };
@@ -34,7 +34,7 @@ export function Reveal(props: RevealProps) {
   const { children, position, className, delay } = props;
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true }); // Solo animar una vez
   const mainControls = useAnimation();
   const slideControls = useAnimation();
 
@@ -54,10 +54,6 @@ export function Reveal(props: RevealProps) {
         initial="hidden"
         animate={mainControls}
         exit="hidden"
-        transition={{
-          duration: 0.5,
-          delay: 0.5,
-        }}
       >
         {children}
       </motion.div>
