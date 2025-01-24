@@ -3,11 +3,12 @@ import { ButtonAddCar } from "./components/ButtonAddCar";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { FiltersAndListCars } from "./components/FiltersAndListCars/FiltersAndListCars";
+import { isAdministrator } from "@/lib/isAdministrator";
 
 export default async function CarsManagerPage() {
   const { userId } = await auth();
 
-  if (!userId) {
+  if (!userId || !isAdministrator(userId)) {
     return redirect("/");
   }
 
