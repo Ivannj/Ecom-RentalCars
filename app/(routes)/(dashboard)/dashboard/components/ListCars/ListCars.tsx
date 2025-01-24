@@ -24,7 +24,7 @@ export function ListCars(props: ListCarsProps) {
   console.log(lovedItems);
 
   return (
-    <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {cars.map((car: Car) => {
         const {
           priceDay,

@@ -1,18 +1,17 @@
 import { auth } from "@clerk/nextjs/server";
 import { ButtonAddCar } from "./components/ButtonAddCar";
-import { ListCars } from "./components/ListCars";
 import { redirect } from "next/navigation";
 import { db } from "@/lib/db";
-import { RedirectStatusCode } from "next/dist/client/components/redirect-status-code";
+import { FiltersAndListCars } from "./components/FiltersAndListCars/FiltersAndListCars";
 
 export default async function CarsManagerPage() {
-  const {userId} = await auth()
+  const { userId } = await auth();
 
   if (!userId) {
-     return redirect ('/')
+    return redirect("/");
   }
 
-  const car = await db.car.findMany({
+  const cars = await db.car.findMany({
     where: {
       userId,
     },
@@ -21,14 +20,14 @@ export default async function CarsManagerPage() {
     },
   });
 
-
   return (
     <div>
       <div className="flex justify-between">
         <h2 className="text-2xl font-bold">Manage your cars</h2>
         <ButtonAddCar />
       </div>
-      <ListCars cars={car}/>
+      <FiltersAndListCars cars={cars} />
     </div>
   );
 }
+

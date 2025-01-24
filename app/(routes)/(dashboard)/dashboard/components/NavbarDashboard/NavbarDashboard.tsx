@@ -6,10 +6,14 @@ import {
 import { Menu } from "lucide-react";
 import { SidebarRoutes } from "../SidebarRoutes";
 import { UserButton } from "@clerk/nextjs";
+import { LogoDashboard } from "../LogoDashboard";
 
 export function NavbarDashboard() {
   return (
     <nav className="flex items-center justify-between w-full h-20 px-2 border-b gap-x-4 md:px-6 bg-background">
+
+<LogoDashboard />
+
         <div className="block xl:hidden">
       <Sheet>
         <SheetTrigger className="flex items-center">

@@ -8,5 +8,4 @@ export type SidebarItemProps ={
     };
     key: string;
 
-    onClose?: () => void;
 }

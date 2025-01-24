@@ -1,20 +1,10 @@
-1- No cierra el menu burger al cambiar de pagina.
+1- No cierra el menu burger al cambiar de pagina. PENDIENTE DIFICIL 
 
-2 - filtros en /dashbard y admin cars 
-
-3 - no aparece el Heart para añadir a loved cars en pantalla movil 
-
-4 - En version movil no hay manera de ir a la home (no hay logo ni boton para ello)
 
 5 -Imagenes de la Home de OurFleet version movil no se visualizan bien
 
 6 - Animaciones de la home mas rapidas
 
-- Modificar todas las secciones con cards para que en pantalla pequeña se vean los coches en una columna: 
-
-
-
-
-Homepag done + url /Cars + Filters in /cars
+problema: 2 LOGOS.
 
 6:45 video 

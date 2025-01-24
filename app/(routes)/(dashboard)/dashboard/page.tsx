@@ -1,15 +1,13 @@
-import { auth } from "@clerk/nextjs/server"
-import { redirect } from "next/navigation"
-import { db } from "@/lib/db"
-import { ListCars } from "./components/ListCars";
-
-
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+import { db } from "@/lib/db";
+import { FiltersAndListCars } from "./components/FiltersAndListCars/FiltersAndListCars";
 
 export default async function DashboardPage() {
-  const {userId} = await auth();
+  const { userId } = await auth();
 
   if (!userId) {
-    return redirect("/")
+    return redirect("/");
   }
 
   const cars = await db.car.findMany({
@@ -24,9 +22,9 @@ export default async function DashboardPage() {
   return (
     <div>
       <div className="flex justify-between">
-        <h2 className=" text-2xl font-bold">List of cars</h2>
+        <h2 className="text-2xl font-bold">List of cars</h2>
       </div>
-      <ListCars cars={cars} />
-      </div>
-  )
+      <FiltersAndListCars cars={cars} />
+    </div>
+  );
 }
