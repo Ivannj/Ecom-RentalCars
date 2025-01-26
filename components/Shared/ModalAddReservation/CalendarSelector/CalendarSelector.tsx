@@ -65,14 +65,12 @@ export function CalendarSelector(props: CalendarSelectorProps) {
           </p>
         </>
       )}
-      <Popover>
+      <Popover onOpenChange={(open) => console.log("Popover abierto:", open)}>
         <PopoverTrigger asChild>
           <Button
             id="date"
             variant="outline"
             className="justify-start text-left font-normal"
-            onClick={(e) => e.preventDefault()} // Evita problemas de eventos duplicados
-            onTouchStart={(e) => e.preventDefault()} // Añade soporte táctil
           >
             <CalendarIcon className="w-4 h-4 mr-2" />
             {date?.from ? (
@@ -89,7 +87,14 @@ export function CalendarSelector(props: CalendarSelectorProps) {
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-full max-w-[700px] p-0">
+        <PopoverContent
+          className="w-full max-w-[700px] p-0 bg-white z-50"
+          style={{
+            pointerEvents: "auto", // Asegura que sea interactuable
+            opacity: 1, // Asegura que sea visible
+            transform: "none", // Resetea posibles transformaciones
+          }}
+        >
           <Calendar
             initialFocus
             mode="range"
