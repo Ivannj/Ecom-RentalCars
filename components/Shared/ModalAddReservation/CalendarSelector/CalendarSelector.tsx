@@ -71,6 +71,12 @@ export function CalendarSelector(props: CalendarSelectorProps) {
             id="date"
             variant="outline"
             className="justify-start text-left font-normal"
+            onClick={(e) => {
+              console.log("Clic detectado");
+            }}
+            onTouchStart={() => {
+              console.log("Toque táctil detectado");
+            }}
           >
             <CalendarIcon className="w-4 h-4 mr-2" />
             {date?.from ? (
