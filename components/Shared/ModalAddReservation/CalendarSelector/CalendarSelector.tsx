@@ -59,24 +59,16 @@ export function CalendarSelector(props: CalendarSelectorProps) {
         <>
           <p className="mt-4 text-lg text-black">Total Days {daysBetween}</p>
           <p className="mb-4 text-md">
-            Total Price:{" "}
-            {parseFloat((daysBetween * Number(carPriceDay)).toFixed(2))}$ (Tax
-            Included)
+            Total Price: {daysBetween * Number(carPriceDay)}$ (Tax Included)
           </p>
         </>
       )}
-      <Popover onOpenChange={(open) => console.log("Popover abierto:", open)}>
+      <Popover>
         <PopoverTrigger asChild>
           <Button
             id="date"
             variant="outline"
             className="justify-start text-left font-normal"
-            onClick={(e) => {
-              console.log("Clic detectado");
-            }}
-            onTouchStart={() => {
-              console.log("Toque táctil detectado");
-            }}
           >
             <CalendarIcon className="w-4 h-4 mr-2" />
             {date?.from ? (
@@ -86,23 +78,15 @@ export function CalendarSelector(props: CalendarSelectorProps) {
                   {format(date.to, "LLL dd, y")}
                 </>
               ) : (
-                format(date.from, "LLL dd, y")
+                format(date.from, "LLL dd,y")
               )
             ) : (
               <span>Pick a date</span>
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent
-          className="w-full max-w-[700px] p-0 bg-white z-50"
-          style={{
-            pointerEvents: "auto", // Asegura que sea interactuable
-            opacity: 1, // Asegura que sea visible
-            transform: "none", // Resetea posibles transformaciones
-          }}
-        >
+        <PopoverContent className="w-full max-w-[700px] p-0">
           <Calendar
-            initialFocus
             mode="range"
             defaultMonth={date?.from}
             selected={date}
