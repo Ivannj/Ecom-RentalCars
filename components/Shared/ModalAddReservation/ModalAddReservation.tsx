@@ -52,18 +52,20 @@ export function ModalAddReservation(props: ModalAddReservationProps) {
             Book Your Car
         </Button>
       </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
-          <AlertDialogTitle>Select dates</AlertDialogTitle>
-          <AlertDialogDescription>
-            <CalendarSelector setDateSelected={setDateSelected} carPriceDay={car.priceDay}/>
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={() => onReserveCar(car, dateSelected)}>Book Now</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
+      <AlertDialogContent
+  className="relative max-w-full bg-white overflow-visible z-50"
+>
+  <AlertDialogHeader>
+    <AlertDialogTitle>Select dates</AlertDialogTitle>
+    <AlertDialogDescription>
+      <CalendarSelector setDateSelected={setDateSelected} carPriceDay={car.priceDay}/>
+    </AlertDialogDescription>
+  </AlertDialogHeader>
+  <AlertDialogFooter>
+    <AlertDialogCancel>Cancel</AlertDialogCancel>
+    <AlertDialogAction onClick={() => onReserveCar(car, dateSelected)}>Book Now</AlertDialogAction>
+  </AlertDialogFooter>
+</AlertDialogContent>
     </AlertDialog>
   );
 }
