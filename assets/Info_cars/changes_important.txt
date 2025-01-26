@@ -1,0 +1,6 @@
+Problema con el calendario components shared modaladdreservation, calendarselector.. o compoennts ui calendar. -> In theory fixed!
+
+
+Desde stripe lleva a localhost
+
+
