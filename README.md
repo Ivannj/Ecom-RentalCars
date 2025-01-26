@@ -8,24 +8,14 @@ Discover, book, and pay securely for cars with an efficient and user-friendly ex
 ## 🛠️ Technologies
 
 <p align="center">
-  <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="./assets/img/Icons/typescript.png" alt="TypeScript" title="TypeScript" width="48" height="48" />
-  </a>
-  <a href="https://reactjs.org/" target="_blank">
-    <img src="./assets/img/Icons/react.png" alt="React" title="React" width="48" height="48" />
-  </a>
-  <a href="https://nextjs.org/" target="_blank">
-    <img src="./assets/img/Icons/next.png" alt="Next.js" title="Next.js" width="48" height="48" />
-  </a>
-  <a href="https://tailwindcss.com/" target="_blank">
-    <img src="./assets/img/Icons/tailwind.png" alt="TailwindCSS" title="TailwindCSS" width="48" height="48" />
-  </a>
-  <a href="https://www.postgresql.org/" target="_blank">
-    <img src="./assets/img/Icons/postgre.png" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
-  </a>
-  <a href="https://stripe.com/" target="_blank">
-    <img src="./assets/img/Icons/stripe.png" alt="Stripe" title="Stripe" width="48" height="48" />
-  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank"><img src="./assets/img/Icons/typescript.png" alt="TypeScript" title="TypeScript" width="60" height="60" 
+  /></a>
+  <a href="https://reactjs.org/" target="_blank"><img src="./assets/img/Icons/react.png" alt="React" title="React" width="60" height="60" /></a>
+  <a href="https://nextjs.org/" target="_blank"><img src="./assets/img/Icons/next.png" alt="Next.js" title="Next.js" width="60" height="60" /></a>
+  <a href="https://tailwindcss.com/" target="_blank"><img src="./assets/img/Icons/tailwind.png" alt="TailwindCSS" title="TailwindCSS" width="60" height="60" />
+</a>
+<a href="https://www.postgresql.org/" target="_blank"><img src="./assets/img/Icons/postgre.png" alt="PostgreSQL" title="PostgreSQL" width="60" height="60" /></a>
+<a href="https://stripe.com/" target="_blank"><img src="./assets/img/Icons/stripe.png" alt="Stripe" title="Stripe" width="60" height="60" /></a>
 </p>
 
 ---
@@ -54,12 +44,15 @@ Test the project here: [Brivify Rental Cars](https://brivify-rental-cars-ivan-na
 ## 📸 Screenshots
 
 ### Homepage
+
 ![Homepage](./assets/img/Screenshots_github/home.png)
 
 ### Dashboard
+
 ![Dashboard](./assets/img/Screenshots_github/dashboard.png)
 
 ### Rental Process
+
 ![Rental Process](./assets/img/Screenshots_github/rental-car.png)
 
 ---
