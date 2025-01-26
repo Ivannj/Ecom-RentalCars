@@ -9,22 +9,22 @@ Discover, book, and pay securely for cars with an efficient and user-friendly ex
 
 <p align="center">
   <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="./assets/img/icons/typescript.png" alt="TypeScript" title="TypeScript" width="48" height="48" />
+    <img src="./assets/img/Icons/typescript.png" alt="TypeScript" title="TypeScript" width="48" height="48" />
   </a>
   <a href="https://reactjs.org/" target="_blank">
-    <img src="./assets/icons/react.png" alt="React" title="React" width="48" height="48" />
+    <img src="./assets/img/Icons/react.png" alt="React" title="React" width="48" height="48" />
   </a>
   <a href="https://nextjs.org/" target="_blank">
-    <img src="./assets/icons/nextjs.png" alt="Next.js" title="Next.js" width="48" height="48" />
+    <img src="./assets/img/Icons/next.png" alt="Next.js" title="Next.js" width="48" height="48" />
   </a>
   <a href="https://tailwindcss.com/" target="_blank">
-    <img src="./assets/icons/tailwindcss.png" alt="TailwindCSS" title="TailwindCSS" width="48" height="48" />
+    <img src="./assets/img/Icons/tailwind.png" alt="TailwindCSS" title="TailwindCSS" width="48" height="48" />
   </a>
   <a href="https://www.postgresql.org/" target="_blank">
-    <img src="./assets/icons/postgresql.png" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
+    <img src="./assets/img/Icons/postgre.png" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
   </a>
   <a href="https://stripe.com/" target="_blank">
-    <img src="./assets/icons/stripe.png" alt="Stripe" title="Stripe" width="48" height="48" />
+    <img src="./assets/img/Icons/stripe.png" alt="Stripe" title="Stripe" width="48" height="48" />
   </a>
 </p>
 
