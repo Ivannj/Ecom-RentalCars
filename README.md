@@ -7,13 +7,20 @@ Discover, book, and pay securely for cars with an efficient and user-friendly ex
 
 ## 🛠️ Technologies
 
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Shadcn](https://img.shields.io/badge/Shadcn-CF5DFF?style=for-the-badge&logo=storybook&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Stripe](https://img.shields.io/badge/Stripe-008CDD?style=for-the-badge&logo=stripe&logoColor=white)
+<p align="center">
+  <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" title="TypeScript" />
+  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" title="React" />
+  <img src="https://img.icons8.com/ios-filled/50/000000/nextjs.png" alt="Next.js" title="Next.js" />
+  <img src="https://img.icons8.com/color/48/000000/tailwind-css.png" alt="TailwindCSS" title="TailwindCSS" />
+  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-postgresql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png" alt="PostgreSQL" title="PostgreSQL" />
+  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-stripe-payment-processing-platform-logo-color-tal-revivo.png" alt="Stripe" title="Stripe" />
+  <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-clerk-platform-logo-shadow-tal-revivo.png" alt="Clerk" title="Clerk" />
+  <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/48/000000/external-uploadthing.png" alt="UploadThing" title="UploadThing" />
+  <img src="https://img.icons8.com/color/48/000000/framer-motion.png" alt="Framer Motion" title="Framer Motion" />
+  <img src="https://img.icons8.com/ios-filled/50/000000/zustand.png" alt="Zustand" title="Zustand" />
+  <img src="https://img.icons8.com/material-outlined/48/000000/axios.png" alt="Axios" title="Axios" />
+  <img src="https://img.icons8.com/ios/50/000000/shadcn.png" alt="Shadcn" title="Shadcn" />
+</p>
 
 ---
 
@@ -60,8 +67,8 @@ Feel free to explore, learn, and build upon it!
 
 If you have any questions, feedback, or suggestions about this project, feel free to reach out:
 
-- **Email:** [your-email@example.com](ivannaharrojimenez@gmail.com)
-- **LinkedIn:** [Your LinkedIn Profile](www.linkedin.com/in/ivan-nj)
+- **Email:** [ivannaharrojimenez@gmail.com](ivannaharrojimenez@gmail.com)
+- **LinkedIn:** [www.linkedin.com/in/ivan-nj](www.linkedin.com/in/ivan-nj)
 - **GitHub Issues:** Open an issue in this repository if you encounter any bugs or have feature requests.
 
 I'm always happy to connect and collaborate!
