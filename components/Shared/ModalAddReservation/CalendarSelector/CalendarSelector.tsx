@@ -57,10 +57,12 @@ export function CalendarSelector(props: CalendarSelectorProps) {
     <div className={className}>
       {date?.from && date?.to && (
         <>
-          <p className="mt-4 text-lg text-black">Total Days {daysBetween}</p>
-          <p className="mb-4 text-md">
+          <div className="mt-4 text-lg text-black">
+            Total Days {daysBetween}
+          </div>
+          <div className="mb-4 text-md">
             Total Price: {daysBetween * Number(carPriceDay)}$ (Tax Included)
-          </p>
+          </div>
         </>
       )}
       <Popover>

@@ -22,13 +22,12 @@ import axios from "axios";
 export function ModalAddReservation(props: ModalAddReservationProps) {
   const { car } = props;
   const [dateSelected, setDateSelected] = useState<{
-    from: Date | undefined,
-    to: Date | undefined,
-
-}>({
+    from: Date | undefined;
+    to: Date | undefined;
+  }>({
     from: new Date(),
-    to: addDays(new Date(), 5)
-})
+    to: addDays(new Date(), 5),
+  });
 
   const onReserveCar = async (car: Car, dateSelected: DateRange) => {
     const response = await axios.post("/api/checkout", {
@@ -43,25 +42,32 @@ export function ModalAddReservation(props: ModalAddReservationProps) {
     Toast({
       title: "Car Reserved 🟢",
     });
-    
-  }
+  };
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="outline" className="w-full mt-3">
-            Book Your Car
+          Book Your Car
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Select dates</AlertDialogTitle>
           <AlertDialogDescription>
-            <CalendarSelector setDateSelected={setDateSelected} carPriceDay={car.priceDay}/>
+            Please select your reservation dates below.
           </AlertDialogDescription>
+          <div>
+            <CalendarSelector
+              setDateSelected={setDateSelected}
+              carPriceDay={car.priceDay}
+            />
+          </div>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <AlertDialogAction onClick={() => onReserveCar(car, dateSelected)}>Book Now</AlertDialogAction>
+          <AlertDialogAction onClick={() => onReserveCar(car, dateSelected)}>
+            Book Now
+          </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
