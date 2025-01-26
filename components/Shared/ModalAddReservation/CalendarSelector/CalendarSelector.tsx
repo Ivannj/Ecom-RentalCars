@@ -71,6 +71,8 @@ export function CalendarSelector(props: CalendarSelectorProps) {
             id="date"
             variant="outline"
             className="justify-start text-left font-normal"
+            onClick={(e) => e.preventDefault()} // Evita problemas de eventos duplicados
+            onTouchStart={(e) => e.preventDefault()} // Añade soporte táctil
           >
             <CalendarIcon className="w-4 h-4 mr-2" />
             {date?.from ? (
@@ -80,7 +82,7 @@ export function CalendarSelector(props: CalendarSelectorProps) {
                   {format(date.to, "LLL dd, y")}
                 </>
               ) : (
-                format(date.from, "LLL dd,y")
+                format(date.from, "LLL dd, y")
               )
             ) : (
               <span>Pick a date</span>
