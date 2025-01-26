@@ -9,40 +9,22 @@ Discover, book, and pay securely for cars with an efficient and user-friendly ex
 
 <p align="center">
   <a href="https://www.typescriptlang.org/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" title="TypeScript" />
+    <img src="./assets/img/icons/typescript.png" alt="TypeScript" title="TypeScript" width="48" height="48" />
   </a>
   <a href="https://reactjs.org/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" title="React" />
+    <img src="./assets/icons/react.png" alt="React" title="React" width="48" height="48" />
   </a>
   <a href="https://nextjs.org/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" title="Next.js" width="48" height="48" />
+    <img src="./assets/icons/nextjs.png" alt="Next.js" title="Next.js" width="48" height="48" />
   </a>
   <a href="https://tailwindcss.com/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/tailwind-css.png" alt="TailwindCSS" title="TailwindCSS" />
+    <img src="./assets/icons/tailwindcss.png" alt="TailwindCSS" title="TailwindCSS" width="48" height="48" />
   </a>
   <a href="https://www.postgresql.org/" target="_blank">
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
+    <img src="./assets/icons/postgresql.png" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
   </a>
   <a href="https://stripe.com/" target="_blank">
-    <img src="https://raw.githubusercontent.com/stripe/stripe-logo/master/logo.png" alt="Stripe" title="Stripe" width="48" height="48" />
-  </a>
-  <a href="https://clerk.dev/" target="_blank">
-    <img src="https://clerk.dev/_nuxt/img/logo-dark.8ad9b59.svg" alt="Clerk" title="Clerk" width="48" height="48" />
-  </a>
-  <a href="https://uploadthing.com/" target="_blank">
-    <img src="https://uploadthing.com/favicon/favicon-32x32.png" alt="UploadThing" title="UploadThing" width="48" height="48" />
-  </a>
-  <a href="https://www.framer.com/motion/" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/framer.png" alt="Framer Motion" title="Framer Motion" />
-  </a>
-  <a href="https://docs.pmnd.rs/zustand/getting-started/introduction" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/50/000000/data-sharing.png" alt="Zustand" title="Zustand" />
-  </a>
-  <a href="https://axios-http.com/" target="_blank">
-    <img src="https://axios-http.com/assets/logo.svg" alt="Axios" title="Axios" width="48" height="48" />
-  </a>
-  <a href="https://shadcn.dev/" target="_blank">
-    <img src="https://shadcn.dev/icons/logo.svg" alt="Shadcn" title="Shadcn" width="48" height="48" />
+    <img src="./assets/icons/stripe.png" alt="Stripe" title="Stripe" width="48" height="48" />
   </a>
 </p>
 
