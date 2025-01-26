@@ -8,18 +8,42 @@ Discover, book, and pay securely for cars with an efficient and user-friendly ex
 ## 🛠️ Technologies
 
 <p align="center">
-  <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" title="TypeScript" />
-  <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" title="React" />
-  <img src="https://img.icons8.com/ios-filled/50/000000/nextjs.png" alt="Next.js" title="Next.js" />
-  <img src="https://img.icons8.com/color/48/000000/tailwind-css.png" alt="TailwindCSS" title="TailwindCSS" />
-  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-postgresql-an-open-source-relational-database-management-system-logo-color-tal-revivo.png" alt="PostgreSQL" title="PostgreSQL" />
-  <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-stripe-payment-processing-platform-logo-color-tal-revivo.png" alt="Stripe" title="Stripe" />
-  <img src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-clerk-platform-logo-shadow-tal-revivo.png" alt="Clerk" title="Clerk" />
-  <img src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/48/000000/external-uploadthing.png" alt="UploadThing" title="UploadThing" />
-  <img src="https://img.icons8.com/color/48/000000/framer-motion.png" alt="Framer Motion" title="Framer Motion" />
-  <img src="https://img.icons8.com/ios-filled/50/000000/zustand.png" alt="Zustand" title="Zustand" />
-  <img src="https://img.icons8.com/material-outlined/48/000000/axios.png" alt="Axios" title="Axios" />
-  <img src="https://img.icons8.com/ios/50/000000/shadcn.png" alt="Shadcn" title="Shadcn" />
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" title="TypeScript" />
+  </a>
+  <a href="https://reactjs.org/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" title="React" />
+  </a>
+  <a href="https://nextjs.org/" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="Next.js" title="Next.js" width="48" height="48" />
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/tailwind-css.png" alt="TailwindCSS" title="TailwindCSS" />
+  </a>
+  <a href="https://www.postgresql.org/" target="_blank">
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" title="PostgreSQL" width="48" height="48" />
+  </a>
+  <a href="https://stripe.com/" target="_blank">
+    <img src="https://raw.githubusercontent.com/stripe/stripe-logo/master/logo.png" alt="Stripe" title="Stripe" width="48" height="48" />
+  </a>
+  <a href="https://clerk.dev/" target="_blank">
+    <img src="https://clerk.dev/_nuxt/img/logo-dark.8ad9b59.svg" alt="Clerk" title="Clerk" width="48" height="48" />
+  </a>
+  <a href="https://uploadthing.com/" target="_blank">
+    <img src="https://uploadthing.com/favicon/favicon-32x32.png" alt="UploadThing" title="UploadThing" width="48" height="48" />
+  </a>
+  <a href="https://www.framer.com/motion/" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/framer.png" alt="Framer Motion" title="Framer Motion" />
+  </a>
+  <a href="https://docs.pmnd.rs/zustand/getting-started/introduction" target="_blank">
+    <img src="https://img.icons8.com/ios-filled/50/000000/data-sharing.png" alt="Zustand" title="Zustand" />
+  </a>
+  <a href="https://axios-http.com/" target="_blank">
+    <img src="https://axios-http.com/assets/logo.svg" alt="Axios" title="Axios" width="48" height="48" />
+  </a>
+  <a href="https://shadcn.dev/" target="_blank">
+    <img src="https://shadcn.dev/icons/logo.svg" alt="Shadcn" title="Shadcn" width="48" height="48" />
+  </a>
 </p>
 
 ---
