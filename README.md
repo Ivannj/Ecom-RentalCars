@@ -59,7 +59,7 @@ Test the project here: [Brivify Rental Cars](https://brivify-rental-cars-ivan-na
 
 ![Admin Dashboard](./assets/img/Screenshots_github/admin.png)
 
-### Admin Dashboard
+### Admin Dashboard Reserves
 
 ![Admin Reserves](./assets/img/Screenshots_github/reserves_admin.png)
 
