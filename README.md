@@ -55,6 +55,10 @@ Test the project here: [Brivify Rental Cars](https://brivify-rental-cars-ivan-na
 
 ![Rental Process](./assets/img/Screenshots_github/rental-car.png)
 
+### Admin Dashboard
+
+![Admin Dashboard](./assets/img/Screenshots_github/admin.png)
+
 ---
 
 ## 🏷️ License
